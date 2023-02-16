@@ -18,16 +18,17 @@ export function Scene() {
         <>
             <ambientLight intensity={0.1} />
             <directionalLight
-                color='white'
+                color="white"
                 position={[15, 15, 15]}
                 castShadow
                 shadow-mapSize-width={2048}
                 shadow-mapSize-height={2048}
             />
+            
             <Trees
                 ref={refTrees}
                 position={[0, 0, -2]}
-                color={[
+                colors={[
                     new Color("#427062").convertLinearToSRGB(),
                     new Color("#33594e").convertLinearToSRGB(),
                     new Color("#234549").convertLinearToSRGB(),
@@ -46,4 +47,3 @@ export function Scene() {
         </>
     )
 }
-
